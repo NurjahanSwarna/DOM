@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    
+</head>
+<body id="bodyTag">
+    <header>
+      <div class="container">
+       
+    </div>
+    </header>
+    
+    <section>
+        <div class="container_full">
+          <div id="content_wrapper">
+                <div class="artical">
+                    <h2>List of Books</h2>
+                    <li>Book name 1</li>
+                    <li>Book name 2</li>
+                    <li>Book name 3</li>
+                    <li>Book name 4</li>
+                    <li>Book name 5</li>
+                </div>
+                <div class="artical">
+                    <h2>List of fruits</h2>
+                    <li>Fruit name 1</li>
+                    <li>Fruit name 2</li>
+                    <li>Fruit name 3</li>
+                    <li>Fruit name 4</li>
+                    <li>Fruit name 5</li>
+                    <li>Fruit name 6</li>
+                </div>
+                <div class="artical">
+                    <h2>List of places</h2>
+                    <li>Place name 1</li>
+                    <li>Place name 2</li>
+                    <li>Place name 3</li>
+                    <li>Place name 4</li>
+                    <li>Place name 5</li>
+                </div>  
+                <div class="artical">
+                    <h2>List of places</h2>
+                    <li>Place name 1</li>
+                    <li>Place name 2</li>
+                    <li>Place name 3</li>
+                    <li>Place name 4</li>
+                    <li>Place name 5</li>
+                </div>  
+    </div>      
+    </div>  
+    </section>
+    <section>
+        <div class="another_continer">
+            <div class="contant_wrapper_1">
+               <div class="artical_1">
+                <h2>List of places</h2>
+                <li>Place name 1</li>
+                <li>Place name 2</li>
+                <li>Place name 3</li>
+                <li>Place name 4</li>
+                <li>Place name 5</li>
+               </div> 
+               <div class="artical_1">
+                <h2>List of places</h2>
+                <li>Place name 1</li>
+                <li>Place name 2</li>
+                <li>Place name 3</li>
+                <li>Place name 4</li>
+                <li>Place name 5</li>
+               </div> 
+               <div class="artical_1">
+                <h2>List of places</h2>
+                <li>Place name 1</li>
+                <li>Place name 2</li>
+                <li>Place name 3</li>
+                <li>Place name 4</li>
+                <li>Place name 5</li>
+               </div> 
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="container_again">
+
+        </div>
+    </section>
+    <script>
+        let Body = document.getElementById('bodyTag');
+         Body.style.backgroundColor = ('bisque');
+
+         let container_top = document.getElementsByClassName('container')
+         container_top[0].style.width = ('80%');
+        //  container_top[0].style.height = ('100%');
+         container_top[0].style.backgroundColor = ('brown');
+         container_top[0].style.color = ('white');
+         container_top[0].style.textAlign = ('center')
+         container_top[0].style.margin = ('0 auto');
+        container_top[0].innerHTML = ('<h1>Welcome to JS DOM test!! </h1>');
+       
+        
+      let articalSection =document.getElementsByClassName('container_full');
+      articalSection[0].style.width = ('80%');
+      articalSection[0].style.height = ('auto');
+    //   articalSection[0].style.backgroundColor = ('red');
+      articalSection[0].style.margin = ('0 auto');
+  
+     let content1  = document.getElementById('content_wrapper')
+    //  content1.style.display = ('flex');
+    //  content1.style.justifyContent= ('space-around');
+    //  content1.style.alignItems = ('center');
+     content1.style.display = ('grid');
+     content1.style.gridTemplateColumns = ('repeat(4 , 1fr)');
+     content1.style.gap = ('5px')
+     content1.style.padding = ('30px')
+     
+
+      
+        let articalPart = document.getElementsByClassName('artical');
+        articalPart[0].style.width = ('220px');
+        articalPart[0].style.height = ('250px');
+        articalPart[0].style.backgroundColor = ('white');
+        articalPart[0].style.border = ('3px solid black')
+        articalPart[0].style.borderRadius = ('15px');
+        articalPart[0].style.padding = ('15px');
+
+       let articalPart1 = document.getElementsByClassName('artical');
+        articalPart1[1].style.width = ('220px');
+        articalPart1[1].style.height = ('250px');
+        articalPart1[1].style.backgroundColor = ('white');
+        articalPart1[1].style.border = ('3px solid black')
+        articalPart1[1].style.borderRadius = ('15px')
+        articalPart1[1].style.padding = ('15px')
+        
+        let articalPart2 = document.getElementsByClassName('artical');
+        articalPart2[2].style.width = ('220px');
+        articalPart2[2].style.height = ('250px');
+        articalPart2[2].style.backgroundColor = ('white');
+        articalPart2[2].style.border = ('3px solid black')
+        articalPart2[2].style.borderRadius = ('15px')
+        articalPart2[2].style.padding = ('15px')
+
+        let articalPart3 = document.getElementsByClassName('artical');
+        articalPart3[3].style.width = ('220px');
+        articalPart3[3].style.height = ('250px');
+        articalPart3[3].style.backgroundColor = ('white');
+        articalPart3[3].style.border = ('3px solid black');
+        articalPart3[3].style.borderRadius = ('15px');
+        articalPart3[3].style.padding = ('15px');
+         
+        let articalHeading = document.querySelectorAll('h2');
+        articalHeading[0].style.color= ('rgb(17, 1, 17)');
+        articalHeading[1].style.color = ('green');
+        articalHeading[2].style.color = ('blue');
+        articalHeading[3].style.color = ('brown');
+        
+        for( let i = 0; i<articalHeading.length; i++){
+            articalHeading[i].style.fontWeight = ('bold');
+            articalHeading[i].style.fontStyle = ('italic');
+
+        }
+
+        let articalList = document.getElementsByTagName('li');
+        articalList[0].style. color = ('rgb(41, 1, 41)red');
+        articalList[1].style. color = ('rgb(89, 15, 89)');
+        articalList[2].style. color = ('rgb(179, 47, 179)');
+        articalList[3].style. color = ('rgb(215, 84, 215)');
+        articalList[4].style. color = ('violet');
+        articalList[5].style. color = ('rgb(232, 74, 74)');
+        articalList[6].style. color = ('rgb(232, 51, 51)');
+        articalList[7].style. color = ('rgb(229, 27, 27)');
+        articalList[8].style. color = ('red');
+        articalList[9].style. color = ('rgb(86, 13, 13)');
+        articalList[10].style. color = ('rgb(49, 3, 3)');
+        articalList[11].style. color = ('rgb(186, 229, 247)');
+        articalList[12].style. color = ('rgb(132, 218, 252)');
+        articalList[13].style. color = ('rgb(114, 174, 200)');
+        articalList[14].style. color = ('rgb(37, 95, 120)');
+        articalList[15].style. color = ('rgb(15, 56, 74)');
+        articalList[16].style. color = ('rgb(66, 237, 111)');
+        articalList[17].style. color = ('rgb(37, 233, 89)');
+        articalList[18].style. color = ('rgb(23, 159, 59)');
+        articalList[19].style. color = ('rgb(4, 130, 38');
+        articalList[20].style. color = ('rgb(6, 92, 29)');
+        
+
+     
+     let underline = document.querySelectorAll('li');
+        for (let i = 0; i < underline.length; i++) {
+            underline[i].style.lineHeight = '30px';
+            underline[i].style.listStyleType = 'none';
+            underline[i].style.marginLeft = '10px';
+            
+            
+        }
+   
+    const anotherContainer = document.getElementsByClassName('another_continer');
+    anotherContainer[0].style.width = ('76%');
+    anotherContainer[0].style.height = ('76%');
+    // anotherContainer[0].style.backgroundColor = ('white');
+    anotherContainer[0].style.margin = ('0 auto');
+   
+    const content2 = document.getElementsByClassName('contant_wrapper_1');
+    content2[0].style.display = ('flex');
+    content2[0].style.justifyContent = ('space-around');
+    content2[0].style.alignItems = ('center');
+      
+const anotherArticalItems = document.querySelectorAll('.artical_1');
+for (let i = 0; i < anotherArticalItems.length; i++) {
+    anotherArticalItems[i].style.width = '230px';
+    anotherArticalItems[i].style.height = '250px';
+    anotherArticalItems[i].style.backgroundColor = 'white';
+    anotherArticalItems[i].style.borderRadius = '15px';
+    anotherArticalItems[i].style.border = '3px solid black';
+    anotherArticalItems[i].style.padding = '15px';
+}
+let anotherListItems = document.getElementsByTagName('li');
+let colors = [
+    'red', 'blue',  'rgb(236, 89, 114)', 'green' 
+    
+];
+for (let i = 0; i<anotherArticalItems.length; i++){
+    anotherArticalItems[i].style.color = colors[i % colors.length ];
+};
+
+const anothersListSize = document.querySelectorAll('li');
+    for(let i = 0; i<anotherArticalItems.length; i++){
+        anotherArticalItems[i].style.fontSize = ('20px')
+    }
+
+
+const againContainer = document.getElementById('container_again');
+againContainer.style.width = ('60%')
+// againContainer.style.backgroundColor = ('brown')
+againContainer.style.margin = ('0 auto')
+againContainer.style.marginTop = ('30px')
+        const againArtical = document.createElement('div');
+        againArtical.style.width = ('400px');
+        againArtical.style.height = ('200px');
+        againArtical.style.backgroundColor = ('white');
+        againArtical.style.margin = ('0 auto');
+        againArtical.style.textAlign = ('center');
+        againArtical.style.lineHeight = ('25px');
+        againArtical.style.justifyContent = ('center');
+        againArtical.style.border = ('3px solid black');
+        againArtical.style.borderRadius = ('15px');
+
+        againArtical.innerHTML = `
+        <h1 style="color: green; font-size: 30px; font-weight : bold; font-style:italic">Book list</h1>
+            <li style =" color : red; font-size:20px; list-style-type:none;">Book name 1</li>
+            <li style =" color : green; font-size:20px; list-style-type:none;">Book name 2</li>
+            <li style =" color : brown; font-size:20px; list-style-type:none;">Book name 3</li>
+            <li style =" color : gray; font-size:20px; list-style-type:none;">Book name 4</li>
+            <li style =" color : blue; font-size:20px; list-style-type:none;">Book name 5</li>
+        `;
+        againContainer.appendChild(againArtical);
+
+    
+    </script>
+</body>
+</html>
